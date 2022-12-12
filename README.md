@@ -1,1 +1,1 @@
-Parking lot Junit Sample
+BSF application Junit Sample
