@@ -1,5 +1,9 @@
 package com.bsf.app.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;
@@ -7,6 +11,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Transaction {
 
 	@Id 

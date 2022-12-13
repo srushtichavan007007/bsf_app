@@ -22,7 +22,7 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public Account save(AccountRequest accountRequest) {
 		/* Check for duplicate account */
-		Optional.of(accountRepository.findByNumber(accountRequest.getNumber()))
+		accountRepository.findByNumber(accountRequest.getNumber())
 			.ifPresent(acc -> { throw new DuplicateAccountException(); });
 		Account account = new Account();
 		account.setNumber(accountRequest.getNumber());
