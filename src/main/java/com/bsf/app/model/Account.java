@@ -11,8 +11,9 @@ import javax.persistence.Id;
 
 @Entity
 @Builder
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Account {
 
 	@Id 
@@ -21,35 +22,4 @@ public class Account {
 	private String number;
 	private String name;
 	private Double balance;
-
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	public String getNumber() {
-		return number;
-	}
-	public void setNumber(String number) {
-		this.number = number;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Double getBalance() {
-		return balance;
-	}
-	public void setBalance(Double balance) {
-		this.balance = balance;
-	}
-
-	@Override
-	public String toString() {
-		return "Account [id=" + id + ", number=" + number + ", name=" + name + ", balance=" + balance + "]";
-	}
-
 }
