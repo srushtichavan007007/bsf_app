@@ -131,7 +131,7 @@ public class AccountControllerTest {
         this.mockMvc.perform(get(API_URL + "/all")
                 .accept(MediaType.APPLICATION_JSON)).andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(1)));
+                .andExpect(jsonPath("$", hasSize(3)));
 
         //then
         verify(accountService, times(1)).findAll();
@@ -181,6 +181,8 @@ public class AccountControllerTest {
     private List<Account> anAccountList() {
         List<Account> accounts = new ArrayList<>();
         accounts.add(anAccount());
+        accounts.add(new Account(2l,"Soham","721872819", 1000.0));
+        accounts.add(new Account(3l, "Vaishali", "90908201", 534.0));
         return accounts;
     }
 }
